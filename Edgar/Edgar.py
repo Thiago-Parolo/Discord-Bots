@@ -1,6 +1,7 @@
 ﻿import discord, random
 import numpy as np
 from discord.ext import commands
+from edgar_token import TOKEN
 
 Edgar = commands.Bot(command_prefix = '!', case_insensitive=True)
 
@@ -61,4 +62,4 @@ async def on_message(message):
         await message.channel.send(msg)
     else: return
 
-Edgar.run('NjQ1NDA3MDA4OTY2ODM2MjU0.XdCIRA.UEZVG5ktUWWFbRzx-JOOfSqCEWk')
+Edgar.run(TOKEN)

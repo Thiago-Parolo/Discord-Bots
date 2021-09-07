@@ -1,6 +1,7 @@
 import discord
 from discord.ext import commands
 from arnitemCog import ArnitemCog
+from arnitem_token import TOKEN
 
 intents = discord.Intents.all()
 Arnitem = commands.Bot(command_prefix = '!', case_insensitive=True, intents=intents)
@@ -14,4 +15,4 @@ async def on_ready():
 
 Arnitem.add_cog(ArnitemCog(Arnitem))
 
-Arnitem.run('Njc4NzMyMzY5NDM1Mjk1NzU0.XknExw.sxbO2ApahMpVnnphU5wxrkq_emg')
+Arnitem.run(TOKEN)
