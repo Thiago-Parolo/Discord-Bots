@@ -26,15 +26,14 @@ def get_results(content):
         elif rolls < 1: rolls = 1
 
         result = [random.choices(range(1, dice + 1), k=rolls), '', rolls, dice]
-
         value = int(content[1])
 
-        value_checks = np.array([101, value, value//2, value//5])
+        value_checks = np.array([value + dice, value, value // 2, value // 5])
         value_success = {
-            101:'\nFalha!',
-            value:'\nSucesso Normal!',
-            value//2:'\nSucesso Bom!',
-            value//5:'\nSucesso Extremo!'
+            value + dice: '\nFalha!',
+            value: '\nSucesso Normal!',
+            value // 2: '\nSucesso Bom!',
+            value // 5: '\nSucesso Extremo!'
         }
 
         for _result in result[0]:
